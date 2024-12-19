@@ -8,14 +8,13 @@ import pandas as pd
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import mlflow
 import mlflow.sklearn
+from dotenv import load_dotenv
 
 from src.wine_quality_ds_project.config.configuration import ModelEvaluationConfig
 from src.wine_quality_ds_project.utils.common import save_json
 
 
-# os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/muhammadafaq1999/end_to_end_ds_project_wine_queality.mlflow"
-# os.environ["MLFLOW_TRACKING_USERNAME"]="muhammadafaq1999"
-# os.environ["MLFLOW_TRACKING_PASSWORD"]="f9459e38c5201df23246f68d9d48551a399fd490"
+load_dotenv()
 
 
 class ModelEvaluation:
